@@ -12,12 +12,10 @@ import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 const Header = () => (
   <header className={styles.header}>
     <div className={styles.left}>
-      <Link href="/">
-        <a className={styles.logo}>
+        <a className={styles.logo} href="/">
           <Image src="/logo.svg" width="32" height="32" alt="Logo" />
           <span className={styles.appName}>Your application</span>
         </a>
-      </Link>
     </div>
     <div className={styles.right}>
       <SignedOut>

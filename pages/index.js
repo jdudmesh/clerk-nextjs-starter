@@ -4,8 +4,7 @@ import React from "react";
 import Link from "next/link";
 
 const ClerkFeatures = () => (
-  <Link href="/user">
-    <a className={styles.cardContent}>
+    <a className={styles.cardContent} href="/user">
       <img alt="Explore Clerk components" src="/icons/layout.svg" />
       <div>
         <h3>Explore features provided by Clerk</h3>
@@ -15,12 +14,10 @@ const ClerkFeatures = () => (
         <img src="/icons/arrow-right.svg" />
       </div>
     </a>
-  </Link>
 );
 
 const SSRDemoLink = () => (
-  <Link href="/ssr-demo">
-    <a className={styles.cardContent}>
+    <a className={styles.cardContent} href="/ssr-demo">
       <img alt="SSR demo" src="/icons/sparkles.svg" />
       <div>
         <h3>Visit the SSR demo page</h3>
@@ -33,12 +30,10 @@ const SSRDemoLink = () => (
         <img src="/icons/arrow-right.svg" />
       </div>
     </a>
-  </Link>
 );
 
 const SignupLink = () => (
-  <Link href="/sign-up">
-    <a className={styles.cardContent}>
+    <a className={styles.cardContent} href="/sign-up">
       <img alt="Sign up" src="/icons/user-plus.svg" />
       <div>
         <h3>Sign up for an account</h3>
@@ -48,7 +43,6 @@ const SignupLink = () => (
         <img src="/icons/arrow-right.svg" />
       </div>
     </a>
-  </Link>
 );
 
 const apiSample = `
@@ -96,8 +90,7 @@ const Main = () => (
       </SignedOut>
 
       <div className={styles.card}>
-        <Link href="https://dashboard.clerk.dev/last-active?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter">
-          <a target="_blank" rel="noopener" className={styles.cardContent}>
+          <a target="_blank" rel="noopener" className={styles.cardContent} href="https://dashboard.clerk.dev/last-active?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter">
             <img src="/icons/settings.svg" />
             <div>
               <h3>Configure settings for your app</h3>
@@ -107,7 +100,6 @@ const Main = () => (
               <img src="/icons/arrow-right.svg" />
             </div>
           </a>
-        </Link>
       </div>
     </div>
 
@@ -116,16 +108,12 @@ const Main = () => (
     </SignedIn>
 
     <div className={styles.links}>
-      <Link href="https://clerk.dev/docs?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter">
-        <a target="_blank" rel="noopener" className={styles.link}>
+        <a target="_blank" rel="noopener" className={styles.link} href="https://clerk.dev/docs?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter">
           <span className={styles.linkText}>Read Clerk documentation</span>
-        </a>
-      </Link>
-      <Link href="https://nextjs.org/docs">
-        <a target="_blank" rel="noopener" className={styles.link}>
+        </a>        
+        <a target="_blank" rel="noopener" className={styles.link} href="https://nextjs.org/docs">
           <span className={styles.linkText}>Read NextJS documentation</span>
         </a>
-      </Link>
     </div>
   </main>
 );
