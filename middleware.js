@@ -11,11 +11,14 @@ const isPublic = (path) => {
 }
 
 export default withClerkMiddleware((request) => {
+  const { userId, debug } = getAuth(request);
+  console.log('middleware', debug())
+
   if (isPublic(request.nextUrl.pathname)) {
     return NextResponse.next()
   }
   // if the user is not signed in redirect them to the sign in page.
-  const { userId } = getAuth(request)
+  
 
   if (!userId) {
     // redirect the users to /pages/sign-in/[[...index]].ts
